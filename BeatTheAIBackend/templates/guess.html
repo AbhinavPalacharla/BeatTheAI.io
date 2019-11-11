@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <link href="/static/img/DNHSLogo.jpg" rel="shortcut icon"/>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+        <div class="header-warp">
+			<a href="/" class="site-logo">
+                <img src="/static/img/optix.jpg" alt="">
+            </a>
+        </div>
+        <center>
+            <link rel="stylesheet" href="/static/style.css">
+            <title>BeatTheAI.io</title>
+            <h1>Guesser</h1>
+
+            <p>Created by DNHS Students: Raadwan, Alvin, Nolan, Abhinav</p>
+
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script type="text/javascript">
+                setTimeout(function() {
+                  location.reload(true);
+                  sessionStorage.setItem("guess", $('#guess').val());
+                  console.log(sessionStorage.getItem("guess"))
+                }, 1500);
+
+                function init(){
+                    var input = document.getElementById('guess');
+                    input.focus();
+                    input.select();
+                    var guess = sessionStorage.getItem("guess");
+                    if (guess !== null) $('#guess').val(guess);
+                }
+            </script>
+                <body onload="init()">
+                <center>
+                    <img src="{{ user_image }}" alt="User Image">
+                    <form method="POST" action="/get">
+                        <br><h2>Guess:</h2><input id="guess" type="text" name="text" value=""><br>
+                        <input type="submit" value="submit" style="position:relative;top:15px;">
+                    </form>
+                    <h2>AI's Guess: {{ ai }}</h2>
+                </center>
+                </body>
+            </center>
+    </head>
+
+</html>
