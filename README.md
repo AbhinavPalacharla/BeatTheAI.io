@@ -1,11 +1,11 @@
 # BeatTheAI
 
-End result of the 12 hour hackathon hosted by Francis Parker School  
+End result of the 12 hour Francis Parker W.A.R. Lords 2019 Hackathon  
 
 Team:  
-Alvin Zheng, Abhinav Palacharla, Nolan Platt, Raadwan Masum
+Raadwan Masum, Alvin Zheng, Nolan Platt, Abhinav Palacharla
 
-Contributions:  
+Roles:  
 AI: Alvin Zheng  
 
 Website Frontend: Nolan Platt, Raadwan Masum  
